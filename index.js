@@ -77,21 +77,6 @@ if (message.content === '-snipe') {
     }
 }
 
-////
-else if (message.content.startsWith('-kiss')) {
-    let user = message.mentions.users.first()
-    if (!user) return message.channel.send('You didnt mention a user.')
-
-    let embed = new Discord.MessageEmbed()
-        .setTitle(`${message.author.username} kissed ${user.username}`)
-        .setDescription(`get kissed`)
-        .setColor('#FE9AAB')
-        .setImage('https://media1.tenor.com/images/503bb007a3c84b569153dcfaaf9df46a/tenor.gif?itemid=17382412')
-        .setTimestamp()
-    message.react('❤️')
-    message.channel.send(embed)
-}
-
 //Afk Command//
 else if (message.content === '-afk') {
     let embed = new Discord.MessageEmbed()
@@ -122,7 +107,7 @@ else if (message.content === '-cat') {
 if (message.content === '-help') {
     let embed = new Discord.MessageEmbed()
         .setTitle('Command List')
-        .setDescription('\`snipe\`,\`editsnipe\`,\`hi\`,\`afk\`,\`steven\`,\`blush\`,\`hug\`,\`cat\`,\`nuke\`,\`ping\`,\`monke\`,\`kiss\`')
+        .setDescription('\`snipe\`,\`editsnipe\`,\`hi\`,\`afk\`,\`blush\`,\`hug\`,\`cat\`,\`nuke\`,\`ping\')
         .setFooter('10 commands found.')
         .setTimestamp()
         .setColor('PURPLE')
